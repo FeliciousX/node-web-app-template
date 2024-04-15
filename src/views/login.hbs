@@ -1,0 +1,21 @@
+{{#> layout head=head }}
+
+{{#*inline "body"}}
+<form
+  class="flex flex-col gap-2"
+  action="/login"
+  method="post"
+  hx-boost=true
+  hx-target="body"
+  hx-swap="innerHTML"
+>
+  <label for="input-email">Email:</label>
+  <input type="text" name="email" value="{{form.email}}">
+  <br/>
+  <label for="input-password">Password:</label>
+  <input type="password" name="password" value="{{form.password}}">
+  <button class="bg-cyan-100" type="submit">Login</button>
+</form>
+{{/inline}}
+
+{{/layout}}

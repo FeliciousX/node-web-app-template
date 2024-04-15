@@ -1,0 +1,38 @@
+{
+  "name": "fx-web-app",
+  "version": "0.0.1",
+  "description": "Generic Web App",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "dev": "concurrently -t -c \"auto\" -n tailwind,server \"npm run tailwind:watch\" \"npm run server:up\"",
+    "server:up": "nodemon ./src/index.js",
+    "tailwind:build": "tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css",
+    "tailwind:watch": "tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch",
+    "test": "npm run test"
+  },
+  "author": "FeliciousX",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.6",
+    "@types/ramda": "^0.29.12",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^7.0.3",
+    "@fastify/view": "^9.0.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "handlebars": "^4.7.8",
+    "htmx.org": "^1.9.11",
+    "ramda": "^0.29.1"
+  }
+}
