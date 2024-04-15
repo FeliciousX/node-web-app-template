@@ -26,7 +26,6 @@
             nodejs_20
             pnpm
             yarn
-            supabase-cli
             nodePackages.typescript-language-server
           ];
         };
